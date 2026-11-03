@@ -89,7 +89,7 @@ conda --version
 conda create -n datamining_env python=3.10 -y
 ```
 
-### 5.2. Cài thư viện (khuyên dùng `-n`)
+### 5.2. Cài thư viện cơ bản (khuyên dùng `-n`)
 
 Dùng `-n tên_env` để chắc chắn cài đúng môi trường, kể cả khi `conda activate` chưa chạy được:
 
@@ -98,6 +98,37 @@ conda install -n datamining_env pandas numpy matplotlib seaborn ipykernel -y
 ```
 
 > `jupyter` (JupyterLab, Qt...) khá nặng và **không cần** nếu chỉ chạy notebook trong VS Code. Chỉ cần `ipykernel`.
+
+### 5.2.1. Cài thư viện Machine Learning (cho phần huấn luyện mô hình)
+
+Notebook dùng `sklearn` (PCA, RandomForest, LogisticRegression, metrics...) và `imblearn` (SMOTE), nên cần cài thêm:
+
+```bash
+conda install -n datamining_env scikit-learn imbalanced-learn -y
+```
+
+> **Lưu ý tên gói:** tên khi cài khác tên khi import.
+>
+> | Cài đặt (`conda install`) | Import trong code |
+> |---------------------------|-------------------|
+> | `scikit-learn` | `import sklearn` / `from sklearn... import ...` |
+> | `imbalanced-learn` | `from imblearn.over_sampling import SMOTE` |
+>
+> Không có gói tên `sklearn` hay `imblearn` để cài.
+
+Nếu conda không tìm thấy `imbalanced-learn`, dùng kênh conda-forge:
+
+```bash
+conda install -n datamining_env -c conda-forge imbalanced-learn -y
+```
+
+Hoặc cài bằng pip vào đúng môi trường (không cần activate):
+
+```bash
+conda run -n datamining_env python -m pip install scikit-learn imbalanced-learn
+```
+
+Sau khi cài xong, **Restart kernel** (hoặc đóng mở lại VS Code) để notebook nhận thư viện mới.
 
 ### 5.3. Kiểm tra đã cài đúng chỗ chưa
 
