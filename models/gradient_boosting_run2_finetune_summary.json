@@ -1,0 +1,41 @@
+{
+  "trained_epochs": 50,
+  "best_epoch": 50,
+  "train_samples": 55890,
+  "validation_samples": 6782,
+  "features": [
+    "job_blue-collar",
+    "marital_married",
+    "marital_single",
+    "education_secondary",
+    "housing_yes",
+    "loan_yes",
+    "contact_unknown",
+    "month_aug",
+    "month_jul",
+    "month_jun",
+    "month_mar",
+    "month_may",
+    "month_oct",
+    "poutcome_success",
+    "age",
+    "balance",
+    "day",
+    "duration",
+    "campaign",
+    "pdays",
+    "previous"
+  ],
+  "train_metrics_on": "train_after_smote",
+  "epoch_time_includes": "training_and_metrics",
+  "total_epoch_time": 9.194488600129262,
+  "validation_metrics": {
+    "loss": 0.2883100954634424,
+    "accuracy": 0.8699498672957829,
+    "precision": 0.4663093415007657,
+    "recall": 0.7670025188916877,
+    "f1": 0.58,
+    "roc_auc": 0.9144421294309862,
+    "pr_auc": 0.5802908912341211
+  }
+}
