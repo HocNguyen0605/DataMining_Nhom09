@@ -1,0 +1,33 @@
+{
+  "selected_model": "gradient_boosting_run2_finetune",
+  "selection_criterion": "lowest_validation_loss",
+  "validation_losses": {
+    "gradient_boosting_run1_random": 0.35952241211071306,
+    "gradient_boosting_run2_finetune": 0.2883100954634424
+  },
+  "best_epoch": 50,
+  "decision_threshold": 0.5,
+  "test_samples": 6782,
+  "positive_class": "Yes (1)",
+  "pr_auc_method": "average_precision",
+  "preprocessing_note": "Giữ cleaning fit trước khi chia tập và giữ cột duration.",
+  "metrics": {
+    "loss": 0.30085387591587137,
+    "accuracy": 0.8619876142730758,
+    "precision": 0.44707623982235384,
+    "recall": 0.7616645649432535,
+    "f1": 0.5634328358208955,
+    "roc_auc": 0.9060075881023575,
+    "pr_auc": 0.5274432344888563
+  },
+  "confusion_matrix": [
+    [
+      5242,
+      747
+    ],
+    [
+      189,
+      604
+    ]
+  ]
+}
