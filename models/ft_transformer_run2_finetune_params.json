@@ -1,0 +1,10 @@
+{
+  "d_token": 32,
+  "n_heads": 4,
+  "n_layers": 3,
+  "dropout": 0.2,
+  "lr": 0.001,
+  "wd": 0.0001,
+  "bs": 256,
+  "sched": "plateau"
+}
